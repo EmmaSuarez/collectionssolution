@@ -1,21 +1,18 @@
 # collectionssolution
-A collections solution system that i created, that uses the MS ecosystem, and allows users to log in accepted payments.
+I have created a collections solution system that utilizes the MS ecosystem, allowing users to log accepted payments.
 
-Users receive payments in both physical and digital form.
-This solution allows users to report pyments to another sector, giving details such as the clients ID number, tax identification number, and the clients name.
-The user gets this information by typing only the client ID number, and is retrieved using from another excel file using the VLOOKUP formula.
-Since the users accept payments for two different companies, i devised a solution, using a cell with data validation and a list with both company names and the following IF formula:
+Users receive payments in both physical and digital forms. This solution enables users to report payments to another department by providing details such as the client's ID number, tax identification number, and client's name. To retrieve this information, the user only needs to input the client ID number, which is fetched from another Excel file using the VLOOKUP formula.
+
+Since users accept payments for two different companies, I devised a solution utilizing a cell with data validation and a list containing both company names. The following IF formula is used:
 
 =IF(B3="COMPANY1",+IFERROR(+VLOOKUP($D$2,'C:\Users\emmanuel_suarez\Desktop\[clientsdata.xlsx]COMPANY1'!$A:$C,2,FALSE),""),+IFERROR(+VLOOKUP($D$2,'C:\Users\emmanuel_suarez\Desktop\[clientsdata.xlsx]COMPANY2'!$A:$C,2,FALSE),""))
 
-This formula displays the clients information based on what company is selected in cell B3, looking it up in different sheet within the clientsdata.xlsx file.
+This formula displays the client's information based on the selected company in cell B3, retrieving the data from different sheets within the clientsdata.xlsx file.
 
-The user then proceeds to paste or type in the invoice number associated with this payment into cell D4.
+Next, the user pastes or types the invoice number associated with the payment into cell D4.
 
-Since the company is based in Argentina, we take payments in the local currency, which is Pesos. Almost all of the inventory sold is valued in US dollar, so the user now needs to enter the foreign exchange rate in which this payment will be accounted in cell D6.
+Since the company is based in Argentina, payments are accepted in the local currency, which is Pesos. However, most inventory items are valued in US dollars. Therefore, the user needs to enter the foreign exchange rate in which this payment will be accounted for in cell D6.
 
-In cell D8, the user inputs the total payment value, while other relevant transaction details, such as withholding taxs, are to be entered below.
-Within ranges D10 and D14, users enter the values corresponding to several witholding taxes, that are available to be selected within a list in range B10 to B14.
-Withholding taxes values are totalized in cell D15.
+In cell D8, the user inputs the total payment value, while other relevant transaction details, such as withholding taxes, are entered below. Ranges D10 to D14 are used for users to enter values corresponding to several withholding taxes, which can be selected from a list in range B10 to B14. The total withholding taxes are calculated and displayed in cell D15.
 
-Cell B8 diplays the total of the payment in USD using the formula =(+D8+D15)/D6(Total payments plus total withholding taxes, divided by foreing exchange rate). 
+Cell B8 displays the total payment amount in USD using the formula =(+D8+D15)/D6 (Total payments plus total withholding taxes divided by the foreign exchange rate).
