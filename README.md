@@ -16,3 +16,10 @@ Since the company is based in Argentina, payments are accepted in the local curr
 In cell D8, the user inputs the total payment value, while other relevant transaction details, such as withholding taxes, are entered below. Ranges D10 to D14 are used for users to enter values corresponding to several withholding taxes, which can be selected from a list in range B10 to B14. The total withholding taxes are calculated and displayed in cell D15.
 
 Cell B8 displays the total payment amount in USD using the formula =(+D8+D15)/D6 (Total payments plus total withholding taxes divided by the foreign exchange rate).
+
+Cell F6 is a textbox that enables users to enter additional information. This textbox interacts with the tasks created in Oulook when the user marks specific checkboxes below.
+
+Cell B17 is an empty space designated for the user to paste a clipboard image, which can then be exported to the final PDF this solution creates.
+
+Cells B36, D36, and F36 contain buttons that, when clicked, erase the information in the corresponding cell directly below them.
+
