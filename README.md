@@ -25,3 +25,5 @@ Cells B36, D36, and F36 contain buttons that, when clicked, erase the informatio
 
 There are four checkboxes that, when selected by the user, generate different tasks in Outlook based on the information entered. These tasks are created when the PDF button is pressed.
 
+Finally, when the user presses the PDF button, the program runs and creates a folder within the "Payments" folder in OneDrive.
+
