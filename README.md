@@ -23,3 +23,5 @@ Cell B17 is an empty space designated for the user to paste a clipboard image, w
 
 Cells B36, D36, and F36 contain buttons that, when clicked, erase the information in the corresponding cell directly below them.
 
+There are four checkboxes that, when selected by the user, generate different tasks in Outlook based on the information entered. These tasks are created when the PDF button is pressed.
+
